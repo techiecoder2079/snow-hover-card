@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,400&display=swap');
+.main-title {
+    font-family: 'Lora', serif;
+    font-size: 50px;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.45);
+    margin-top: 100px;
+    letter-spacing: 15px;
+}
+
+.inner-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.service-block {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+    padding: 180px 30px 25px 40px;
+    margin-top: 45px;
+}
+
+.service-block::before {
+    content: "";
+    width: 273px;
+    height: 273px;
+    background: #d858f5;
+    border-radius: 50%;
+    position: absolute;
+    top: -148px;
+    left: -83px;
+    transform: scale(0);
+}
+
+.service-block:hover::before {
+    transform: scale(1);
+    transition: all 0.5s linear;
+    transition-delay: 0.1s;
+}
+
+.service-block:hover {
+    border-color: transparent;
+}
+
+.service-block .icon-s {
+    position: absolute;
+    left: 40px;
+    top: 52px;
+    width: 130px;
+}
+
+.service-block .title a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    color: #253d5f;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.service-block p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    color: #737f92;
+    padding-bottom: 20px;
+}
+
+.service-block .detail-button {
+    font-size: 40px;
+    color: #c647fe;
+}
+
+.service-block .hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #9a5be8;
+    z-index: -3;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+.service-block:hover .hover-content {
+    opacity: 1;
+}
+
+.service-block .hover-content::before {
+    content: "";
+    width: 493px;
+    height: 493px;
+    background: #c647fe;
+    border-radius: 50%;
+    position: absolute;
+    top: -250px;
+    left: -180px;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.service-block:hover .hover-content::before {
+    opacity: 1;
+    transform: translate(0%, 0%);
+    transition: all 0.9s linear;
+}
+
+.service-block .hover-content::after {
+    content: "";
+    width: 602px;
+    height: 602px;
+    background: #a461e8;
+    border-radius: 50%;
+    position: absolute;
+    top: -196px;
+    left: -180px;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.service-block:hover .hover-content::after {
+    opacity: 1;
+    transform: translate(0%, 0%);
+    transition: all 1.3s linear;
+}
+
+.service-block .snow-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
+
+.service-block .snow-dot:nth-child(1) {
+    top: 25px;
+    left: 41%;
+    z-index: 1;
+    animation: grow-big-small 1s alternate infinite ease-in;
+}
+
+.service-block .snow-dot:nth-child(2) {
+    top: 25px;
+    left: 78%;
+    animation: grow-big-small 1.1s alternate infinite ease-in;
+}
+
+.service-block .snow-dot:nth-child(3) {
+    top: 75px;
+    left: 61%;
+    animation: grow-big-small 0.8s alternate infinite ease-in;
+}
+
+.service-block .snow-dot:nth-child(4) {
+    top: 135px;
+    left: 84%;
+    animation: grow-big-small 1s alternate infinite ease-in;
+}
+
+.service-block .snow-dot:nth-child(5) {
+    bottom: 35px;
+    right: 12%;
+    animation: grow-big-small 1.2s alternate infinite ease-in;
+}
+
+.service-block .snow-dot:nth-child(6) {
+    bottom: 80px;
+    right: 31%;
+    animation: grow-big-small 0.9s alternate infinite ease-in;
+}
+
+.service-block .snow-dot:nth-child(7) {
+    bottom: 40px;
+    right: 51%;
+    animation: grow-big-small 1s alternate infinite ease-in;
+}
+
+@keyframes grow-big-small {
+    0% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0.3);
+    }
+}
+
+.service-block:hover .title a, .service-block:hover .icon-s, .service-block:hover p, .service-block:hover .detail-button {
+    color: #fff !important;
+}
